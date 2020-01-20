@@ -2,6 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import sys
 import re
+import time
 
 DEBUG = False
 
@@ -16,13 +17,15 @@ def main(option, txt):
             -k: Korean
             -e: English
             -j: Japanese
+            
+            You have to use Double quotation mark for source_txt
         """)
     elif option[1] == 'k':
-        print(translate('Korean', txt))
+        print(translate('Korean', txt[1:-1]))
     elif option[1] == 'e':
-        print(translate('English', txt))
+        print(translate('English', txt[1:-1]))
     elif option[1] == 'j':
-        print(translate('Japanese', txt))
+        print(translate('Japanese', txt[1:-1]))
 
 
 def translate(target_lang, source_text) -> str:
@@ -61,11 +64,13 @@ def translate(target_lang, source_text) -> str:
         # Submmit
         translate_button = driver.find_element_by_css_selector(selectors["TranslateButton"])
         translate_button.click()
-        if DEBUG:
-            driver.get_screenshot_as_file("dbjg.png")
-
+        time.sleep(1)
         # read result
         result = driver.find_element_by_css_selector(selectors["TargetText"]).text
+
+        if DEBUG:
+            driver.get_screenshot_as_file("dbjg.png")
+        
     finally:
         driver.quit()
 
@@ -77,8 +82,9 @@ if __name__ == "__main__":
     # Excution arguments exception
     if len(sys.argv) != 3:
         print("""
-        !!! usage: ppg [target_lang_option] [source_txt]
+        !!! usage: ppg [target_lang_option] "[source_txt]"
+            
+            You have to use Double quotation mark for source_txt
         """)
         sys.exit()
     main(sys.argv[1], sys.argv[2])
-    main('-e', '안녕하세요')
