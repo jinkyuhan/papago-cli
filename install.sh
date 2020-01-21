@@ -7,7 +7,7 @@ echo "#!/bin/bash" > ./uninstall.sh
 echo "" >> ./uninstall.sh 
 echo "sudo rm -f /usr/bin/ppg" >> ./uninstall.sh
 echo "sudo rm -rf /usr/share/ppg" >> ./uninstall.sh
-echo "echo \"Complete to uninstall papago-cli. You can download it again in http://github.com/jinkyuhan/papago-cli\"" >> ./uninstall.sh
+echo "echo \"Complete to uninstall papago-cli. You can download it again in https://github.com/jinkyuhan/papago-cli\"" >> ./uninstall.sh
 
 chmod +x ./uninstall.sh
 
