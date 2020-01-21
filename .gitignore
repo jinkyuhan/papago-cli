@@ -1,3 +1,2 @@
-chromedriver
-ppg_venv/
-chromedriver.exe
+.vscode/
+API_key.json
