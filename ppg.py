@@ -55,7 +55,7 @@ def translate(target_lang, source_text):
 
 
 def get_api_key():
-    with open('./API_key.json') as API_key:
+    with open('/usr/share/ppg/API_key.json') as API_key:
         key = json.load(API_key)
     return key
 
