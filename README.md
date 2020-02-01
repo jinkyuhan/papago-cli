@@ -22,6 +22,17 @@
 ## Result
 - The use of **OpenAPI** was not as difficult as I thought, so it was easy to implement.
 - Now I think it would be better to use Selenium only for **testing** or **crawling**.
+## Installation
+- You just run the script
+```bash
+~$ bash [papago-cli-path]/install.sh
+```
+
+## Uninstallation
+- It provides a clear uninstall script. If you failed install it perfectly. you can run this script.
+```bash
+~$ bash [papago-cli-path]/uninstall.sh
+```
 ## Support
 - Now, the module only supports these languages. If there are people who need other language support, we will expand it further."
 - Supported languages
