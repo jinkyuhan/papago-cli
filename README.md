@@ -16,7 +16,8 @@
 ## Other
 - **Install script**
     - It just change the 'ppg' module to executable file.
-    - Then it add the executable file and API key to the system environment variable PATH for immediate use.
+    - Then it copy the executable file and API key into the PATH(/usr/bin/share) for immediate use.
+    - Then it make the symbolic link of the file in PATH(/usr/bin)
     - Finally, It create the uninstall script. It just help you delete the copied files.
 ## Result
 - The use of **OpenAPI** was not as difficult as I thought, so it was easy to implement.
@@ -27,8 +28,7 @@
     - Korean
     - English
     - Japanese
-## Usage
-&nbsp;&nbsp;&nbsp;&nbsp;This program needs the api-key to run. If you want to use this, send email to here 'gkswlsrb95@gmail.com'. Copy the 'API_key.json' to the git clone directory. Then execute install.sh
+    
 - Example of use
 ```bash
 # Korean to English
